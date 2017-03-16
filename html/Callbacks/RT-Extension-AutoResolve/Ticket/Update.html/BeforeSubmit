@@ -1,0 +1,19 @@
+<script>
+
+jQuery('document').ready(function() {
+  "use strict";
+
+  var form   = jQuery('form[name=TicketUpdate]');
+  var action = form.find('input[name=Action]').val();
+  if ( action === 'Respond' ) {
+
+    var owner = jQuery('#Owner');
+    if (owner.val() === 'Nobody') {
+      owner.val(RT.CurrentUser.Name);
+    }
+
+  }
+
+});
+
+</script>
